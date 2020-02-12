@@ -12,6 +12,53 @@
 
     <!-- TODO #1 - Use a loop to display job results in a table. -->
 
+    <table th:each="job : ${jobs}" class="job-listing">
+            <tr>
+                <td>ID: </td>
+                <td th:text="${job.id}"></td>
+            </tr>
+            <tr>
+                <td>Name: </td>
+                <td th:text="${job.name}"></td>
+            </tr>
+            <tr>
+                <td>Employer: </td>
+                <td th:text="${job.employer}"></td>
+            </tr>
+            <tr>
+                <td>Location: </td>
+                <td th:text="${job.location}"></td>
+            </tr>
+            <tr>
+                <td>Position Type: </td>
+                <td th:text="${job.positionType}"></td>
+            </tr>
+            <tr>
+                <td>Core Competency: </td>
+                <td th:text="${job.coreCompetency}"></td>
+            </tr>
+    </table>
+<!--    <table th:block th:each="job : ${jobs}" class="job-listing">-->
+<!--        <tr>-->
+<!--            <td th:utext="${'ID: ' + job.id} +-->
+<!--                         ${'\nName: ' + job.name} + '<br/>'-->
+<!--                         ${'Employer: ' + job.employer} + '<br/>'-->
+<!--                         ${'Location: ' + job.location} + '<br/>'-->
+<!--                         ${'Position Type: ' + job.positionType} + '<br/ >'-->
+<!--                         ${'Core Competency: ' + job.coreCompetency}"></td>-->
+<!--        </tr>-->
+<!--    </table>-->
+    <table th:block th:each="job : ${jobs}" class="job-listing">
+<!--        <span >-->
+            <tr th:text="${'ID: ' + job.id}"></tr><br/>
+            <tr th:text="${'Name: ' + job.name}"></tr><br/>
+            <tr th:text="${'Employer: ' + job.employer}"></tr><br/>
+            <tr th:text="${'Location: ' + job.location}"></tr><br/>
+            <tr th:text="${'Position Type: ' + job.positionType}"></tr><br/>
+            <tr th:text="${'Core Competency: ' + job.coreCompetency}"></tr>
+<!--         </span>-->
+    </table>
+
 </div>
 
 </body>
