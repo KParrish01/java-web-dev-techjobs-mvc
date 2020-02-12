@@ -38,26 +38,26 @@
                 <td th:text="${job.coreCompetency}"></td>
             </tr>
     </table>
-<!--    <table th:block th:each="job : ${jobs}" class="job-listing">-->
-<!--        <tr>-->
-<!--            <td th:utext="${'ID: ' + job.id} +-->
-<!--                         ${'\nName: ' + job.name} + '<br/>'-->
-<!--                         ${'Employer: ' + job.employer} + '<br/>'-->
-<!--                         ${'Location: ' + job.location} + '<br/>'-->
-<!--                         ${'Position Type: ' + job.positionType} + '<br/ >'-->
-<!--                         ${'Core Competency: ' + job.coreCompetency}"></td>-->
-<!--        </tr>-->
-<!--    </table>-->
     <table th:block th:each="job : ${jobs}" class="job-listing">
-<!--        <span >-->
-            <tr th:text="${'ID: ' + job.id}"></tr><br/>
-            <tr th:text="${'Name: ' + job.name}"></tr><br/>
-            <tr th:text="${'Employer: ' + job.employer}"></tr><br/>
-            <tr th:text="${'Location: ' + job.location}"></tr><br/>
-            <tr th:text="${'Position Type: ' + job.positionType}"></tr><br/>
-            <tr th:text="${'Core Competency: ' + job.coreCompetency}"></tr>
-<!--         </span>-->
+        <tr>
+            <td>
+                <p th:text="${'ID: ' + job.id}"></p>
+                <p th:text="${'Name: ' + job.name}"></p>
+                <p th:text="${'Employer: ' + job.employer}"></p>
+                <p th:text="${'Location: ' + job.location}"></p>
+                <p th:text="${'Position Type: ' + job.positionType}"></p>
+                <p th:text="${'Core Competency: ' + job.coreCompetency}"></p>
+            </td>
+        </tr>
     </table>
+<!--    <table th:block th:each="job : ${jobs}" class="job-listing">-->
+<!--            <tr th:text="${'ID: ' + job.id}"></tr><br/>-->
+<!--            <tr th:text="${'Name: ' + job.name}"></tr><br/>-->
+<!--            <tr th:text="${'Employer: ' + job.employer}"></tr><br/>-->
+<!--            <tr th:text="${'Location: ' + job.location}"></tr><br/>-->
+<!--            <tr th:text="${'Position Type: ' + job.positionType}"></tr><br/>-->
+<!--            <tr th:text="${'Core Competency: ' + job.coreCompetency}"></tr>-->
+<!--    </table>-->
 
 </div>
 
