@@ -37,35 +37,36 @@
     <hr />
 
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
-    <table th:each="job : ${jobs}" class="job-listing">
-        <tr>
-            <td>ID: </td>
-            <td th:text="${job.id}"></td>
-        </tr>
-        <tr>
-            <td>Name: </td>
-            <td th:text="${job.name}"></td>
-        </tr>
-        <tr>
-            <td>Employer: </td>
-            <td th:text="${job.employer}"></td>
-        </tr>
-        <tr>
-            <td>Location: </td>
-            <td th:text="${job.location}"></td>
-        </tr>
-        <tr>
-            <td>Position Type: </td>
-            <td th:text="${job.positionType}"></td>
-        </tr>
-        <tr>
-            <td>Core Competency: </td>
-            <td th:text="${job.coreCompetency}"></td>
-        </tr>
-    </table>
-<!--    <table th:block th:each="job : ${jobs}" class="job-listing">-->
-<!--        <tbody th:block th:each="job : ${jobs}" class="job-listing">-->
+    <table th:replace="fragments :: table1"></table>
+    <table th:replace="fragments :: table2"></table>
+<!--    <table th:each="job : ${jobs}" class="job-listing">-->
 <!--        <tr>-->
+<!--            <td>ID: </td>-->
+<!--            <td th:text="${job.id}"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Name: </td>-->
+<!--            <td th:text="${job.name}"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Employer: </td>-->
+<!--            <td th:text="${job.employer}"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Location: </td>-->
+<!--            <td th:text="${job.location}"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Position Type: </td>-->
+<!--            <td th:text="${job.positionType}"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Core Competency: </td>-->
+<!--            <td th:text="${job.coreCompetency}"></td>-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--    <table>-->
+<!--        <tr th:block th:each="job : ${jobs}" class="job-listing">-->
 <!--            <td>-->
 <!--                <p th:text="${'ID: ' + job.id}"></p>-->
 <!--                <p th:text="${'Name: ' + job.name}"></p>-->
@@ -75,7 +76,6 @@
 <!--                <p th:text="${'Core Competency: ' + job.coreCompetency}"></p>-->
 <!--            </td>-->
 <!--        </tr>-->
-<!--        </tbody>-->
 <!--    </table>-->
 
 </div>

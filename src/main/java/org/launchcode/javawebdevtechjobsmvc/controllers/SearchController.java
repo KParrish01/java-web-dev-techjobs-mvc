@@ -28,8 +28,7 @@ public class SearchController {
 
     @RequestMapping(value="results")
 //    @PostMapping(value="results")  // <<<which is better?
-    public String displaySearchResults(Model model, @RequestParam String searchType, String searchTerm){
-        /* do whatever 3) 1 et al recommend ******* also check variable name syntax against templates******* */
+    public String displaySearchResults(Model model, @RequestParam String searchType, @RequestParam  String searchTerm){
 
         ArrayList<Job> jobs;
          if (searchType.toLowerCase().equals("all")) {  //
