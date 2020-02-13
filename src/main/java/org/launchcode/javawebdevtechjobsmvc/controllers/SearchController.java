@@ -34,11 +34,12 @@ public class SearchController {
         ArrayList<Job> jobs;
          if (searchType.toLowerCase().equals("all")) {  //
              jobs = JobData.findAll();
-//             model.addAttribute(("title","All Jobs"); // <<<<<< ******** what is wrong with this? *******
+             model.addAttribute("title","All Jobs"); // <<<<<< ******** what is wrong with this? *******
          } else {
              jobs = JobData.findByColumnAndValue(searchType, searchTerm); // <<<<****** check if this is correct! *******
              model.addAttribute("title", "Jobs with " + ListController.columnChoices.get(searchType) + ": " + searchTerm);
          }
+        System.out.println("searchType: " + searchType + ", searchTerm: " + searchTerm);
         model.addAttribute("jobs", jobs);
         return "search";
     }
