@@ -38,8 +38,22 @@
 
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
     <table th:replace="fragments :: table1"></table>
-    <table th:replace="fragments :: table2"></table>
-<!--    <table th:each="job : ${jobs}" class="job-listing">-->
+<!--    <table th:replace="fragments :: table2"></table>-->
+
+    <!--    <table>-->
+    <!--        <tr th:block th:each="job : ${jobs}" class="job-listing">-->
+    <!--            <td>-->
+    <!--                <p th:text="${'ID: ' + job.id}"></p>-->
+    <!--                <p th:text="${'Name: ' + job.name}"></p>-->
+    <!--                <p th:text="${'Employer: ' + job.employer}"></p>-->
+    <!--                <p th:text="${'Location: ' + job.location}"></p>-->
+    <!--                <p th:text="${'Position Type: ' + job.positionType}"></p>-->
+    <!--                <p th:text="${'Core Competency: ' + job.coreCompetency}"></p>-->
+    <!--            </td>-->
+    <!--        </tr>-->
+    <!--    </table>-->
+
+    <!--    <table th:each="job : ${jobs}" class="job-listing">-->
 <!--        <tr>-->
 <!--            <td>ID: </td>-->
 <!--            <td th:text="${job.id}"></td>-->
@@ -63,18 +77,6 @@
 <!--        <tr>-->
 <!--            <td>Core Competency: </td>-->
 <!--            <td th:text="${job.coreCompetency}"></td>-->
-<!--        </tr>-->
-<!--    </table>-->
-<!--    <table>-->
-<!--        <tr th:block th:each="job : ${jobs}" class="job-listing">-->
-<!--            <td>-->
-<!--                <p th:text="${'ID: ' + job.id}"></p>-->
-<!--                <p th:text="${'Name: ' + job.name}"></p>-->
-<!--                <p th:text="${'Employer: ' + job.employer}"></p>-->
-<!--                <p th:text="${'Location: ' + job.location}"></p>-->
-<!--                <p th:text="${'Position Type: ' + job.positionType}"></p>-->
-<!--                <p th:text="${'Core Competency: ' + job.coreCompetency}"></p>-->
-<!--            </td>-->
 <!--        </tr>-->
 <!--    </table>-->
 
