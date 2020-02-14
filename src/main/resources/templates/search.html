@@ -11,7 +11,7 @@
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
     <form th:action="@{/search/results}" method = "post">
-        <h2>Search by:</h2>
+        <h3>Search by:</h3>
 
         <p>
             <span th:each="column : ${columns}">
@@ -21,9 +21,10 @@
                         th:id="${column.key}"
                         th:value="${column.key}"
                         th:checked="${column.key == 'all'}"/>
+<!--                        th:checked="${column.key == 'all'}"/>-->
+<!--                        th:checked="${column.key}"/>-->
                 <label th:for="${column.key}" th:text="${column.value}"></label>
             </span>
-
         </p>
 
         <p>

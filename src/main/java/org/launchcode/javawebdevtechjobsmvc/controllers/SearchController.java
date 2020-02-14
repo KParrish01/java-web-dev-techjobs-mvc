@@ -21,12 +21,12 @@ public class SearchController {
     @RequestMapping(value = "")
     public String search(Model model) {
         model.addAttribute("columns", columnChoices);
-//        model.addAttribute("tableChoices", tableChoices);
-        model.addAttribute("employers", JobData.getAllEmployers());
-        model.addAttribute("locations", JobData.getAllLocations());
-        model.addAttribute("positions", JobData.getAllPositionTypes());
-        model.addAttribute("skills", JobData.getAllCoreCompetency());
-        model.addAttribute("all",JobData.findAll());     // added for step 2) *******
+////        model.addAttribute("tableChoices", tableChoices);
+//        model.addAttribute("employers", JobData.getAllEmployers());
+//        model.addAttribute("locations", JobData.getAllLocations());
+//        model.addAttribute("positions", JobData.getAllPositionTypes());
+//        model.addAttribute("skills", JobData.getAllCoreCompetency());
+//        model.addAttribute("all",JobData.findAll());     // added for step 2) *******
         return "search";
     }
 
@@ -35,6 +35,7 @@ public class SearchController {
     @RequestMapping(value="results")
 //    @PostMapping(value="results")  // <<<which is better?
     public String displaySearchResults(Model model, @RequestParam(defaultValue = "all") String searchType, @RequestParam  String searchTerm){
+        model.addAttribute("columns", columnChoices);
 
         ArrayList<Job> jobs;
          if (searchType.toLowerCase().equals("all") && (searchTerm.toLowerCase().equals("all") || searchTerm.toLowerCase().equals(" ") || searchTerm.toLowerCase().equals("") || searchTerm.toLowerCase().equals(null))) {  //
