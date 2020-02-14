@@ -34,8 +34,10 @@ table.job-listing td:first-child {
 }
 
 table.job-listing td:last-child {
+    font-style: italic;
+    font-size: 100%;
     width: 80%;
-}
+ }
 
 label {
     margin-right: 15px;
@@ -45,3 +47,12 @@ label {
     text-align: center;
 }
 
+.jobLabel {
+    font-weight: bold;
+}
+
+.jobValue {
+    font-style: italic;
+    font-size: 100%;
+    width: 80%;
+}
