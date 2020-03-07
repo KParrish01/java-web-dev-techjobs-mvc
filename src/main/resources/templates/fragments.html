@@ -40,9 +40,9 @@
         </tr>
     </table>
 
-    <table th:fragment="table0">
+    <table th:fragment="table0" class="job-listing">
         <tbody>
-            <tr th:block th:each="job : ${jobs}" class="job-listing">
+            <tr th:block th:each="job : ${jobs}" >
                 <td>
                     <p th:text="${'ID: ' + job.id}" class="jobLabel"></p>
                     <p th:text="${'Name: ' + job.name}" class="jobLabel"></p>
